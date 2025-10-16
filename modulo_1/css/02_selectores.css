@@ -1,0 +1,23 @@
+h1 {
+    color: aqua(186, 94, 144);
+}
+
+.tipo_clase{
+    color: aquamarine;
+}
+
+#selector_id {
+    color: brown;
+}
+
+* {
+    margin: 0;
+}
+
+div p {
+    color: blue;
+}
+
+ul > li {
+    color: crimson;
+}
