@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 20px;
+}
+
+h1 {
+    color: rgb(186, 94, 144);
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
