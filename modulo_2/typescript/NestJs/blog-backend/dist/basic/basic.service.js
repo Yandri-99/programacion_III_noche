@@ -124,16 +124,16 @@ let BasicService = class BasicService {
     }
     verificarCredito(edad, ingreso, historialCrediticio) {
         let aprobarCredito = "No";
-        if (edad > +20 && ingreso >= 2000 && historialCrediticio == "bueno") {
+        if (edad > 20 && ingreso >= 2000 && historialCrediticio === "bueno") {
             aprobarCredito = "Si";
         }
         return {
-            service: 'Blog Backend Api',
-            function: 'verificarCredito',
-            message: 'Verificación de crédito',
-            edad: edad,
-            ingreso: ingreso,
-            historialCrediticio: historialCrediticio,
+            service: "Blog Backend Api",
+            function: "verificarCredito",
+            message: "Verificación de crédito",
+            edad,
+            ingreso,
+            historialCrediticio,
             aprobado: aprobarCredito
         };
     }

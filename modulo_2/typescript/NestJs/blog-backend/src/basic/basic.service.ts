@@ -118,31 +118,27 @@ export class BasicService {
             promedio: promedio,
         }
     }
-    verificarCredito(edad: number,
-        ingreso: number, historialCrediticio: string): object {
+    verificarCredito(
+        edad: number,
+        ingreso: number,
+        historialCrediticio: string
+    ): object {
         let aprobarCredito = "No";
 
-        if(edad>+20&&ingreso>=2000&&historialCrediticio=="bueno"){
+        if (edad > 20 && ingreso >= 2000 && historialCrediticio === "bueno") {
             aprobarCredito = "Si";
         }
+
         return {
-            service: 'Blog Backend Api',
-            function: 'verificarCredito',
-            message: 'Verificación de crédito',
-            edad: edad,
-            ingreso: ingreso,
-            historialCrediticio: historialCrediticio,
+            service: "Blog Backend Api",
+            function: "verificarCredito",
+            message: "Verificación de crédito",
+            edad,
+            ingreso,
+            historialCrediticio,
             aprobado: aprobarCredito
         };
-
-
     }
 }
-
-
-
-
-
-
 
 

@@ -13,5 +13,9 @@ export declare class BasicController {
     licencia(bodyData: Object): object;
     areaTriangulo(bodyData: Object): object;
     calcularMayor(bodyData: Object): object;
-    verificarCredito(edad: number, ingreso: number, historialCrediticio: string): object;
+    verificarCredito(bodyData: {
+        edad: number;
+        ingreso: number;
+        historialCrediticio: string;
+    }): object;
 }
