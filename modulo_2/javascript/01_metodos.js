@@ -1,1 +1,0 @@
-console.log("Bienvenidos A JavaScript Desde Un Archivo Externo")
