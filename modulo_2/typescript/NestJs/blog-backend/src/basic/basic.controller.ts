@@ -66,14 +66,10 @@ export class BasicController {
         return this.basicService
             .calcularMayor(bodyData);
     }  
-     @Get('verificar-credito')
-    verificarCredito(
-        @Query('edad') edad: number,
-        @Query('ingreso') ingreso: number,
-        @Query('historialCrediticio') historialCrediticio: string,
-    ) {
-        return this.basicService
-        .verificarCredito(+edad, +ingreso, historialCrediticio);
+    @Post('verificar-credito')
+    verificarCredito(@Body() bodyData: { edad: number, ingreso: number, historialCrediticio: string }) {
+        const { edad, ingreso, historialCrediticio } = bodyData;
+        return this.basicService.verificarCredito(edad, ingreso, historialCrediticio);
     }
 }
 

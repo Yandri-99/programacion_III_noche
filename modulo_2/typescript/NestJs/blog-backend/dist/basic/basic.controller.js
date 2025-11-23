@@ -62,9 +62,9 @@ let BasicController = class BasicController {
         return this.basicService
             .calcularMayor(bodyData);
     }
-    verificarCredito(edad, ingreso, historialCrediticio) {
-        return this.basicService
-            .verificarCredito(+edad, +ingreso, historialCrediticio);
+    verificarCredito(bodyData) {
+        const { edad, ingreso, historialCrediticio } = bodyData;
+        return this.basicService.verificarCredito(edad, ingreso, historialCrediticio);
     }
 };
 exports.BasicController = BasicController;
@@ -147,12 +147,10 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], BasicController.prototype, "calcularMayor", null);
 __decorate([
-    (0, common_1.Get)('verificar-credito'),
-    __param(0, (0, common_1.Query)('edad')),
-    __param(1, (0, common_1.Query)('ingreso')),
-    __param(2, (0, common_1.Query)('historialCrediticio')),
+    (0, common_1.Post)('verificar-credito'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number, Number, String]),
+    __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], BasicController.prototype, "verificarCredito", null);
 exports.BasicController = BasicController = __decorate([
