@@ -17,6 +17,7 @@ const users_module_1 = require("./users/users.module");
 const categories_module_1 = require("./categories/categories.module");
 const posts_module_1 = require("./posts/posts.module");
 const auth_module_1 = require("./auth/auth.module");
+const mail_module_1 = require("./mail/mail.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -39,6 +40,7 @@ exports.AppModule = AppModule = __decorate([
             categories_module_1.CategoriesModule,
             posts_module_1.PostsModule,
             auth_module_1.AuthModule,
+            mail_module_1.MailModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
