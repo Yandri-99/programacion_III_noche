@@ -1,5 +1,3 @@
-
-<script type="module">
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, Types } from 'mongoose';
@@ -24,7 +22,7 @@ export class CursosService {
 
         // Crear los contenidos uno por uno
         for (const contenido of contenidos) {
-          // Filtramos solo los campos necesarios para `Contenido`
+          // Filtramos solo los campos necesarios para Contenido
           const contenidoData = {
             titulo: contenido.titulo,
             duracion: contenido.duracion,
@@ -123,11 +121,10 @@ export class CursosService {
       const curso = await this.findOne(id);
       if (!curso) return null;
 
-      return await curso.deleteOne();  // Cambié de `remove` a `deleteOne`
+      return await curso.deleteOne();  // Cambié de remove a deleteOne
     } catch (err) {
       console.error('Error deleting course:', err);
       return null;
     }
   }
 }
-</script>

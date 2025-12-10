@@ -18,12 +18,15 @@ const categories_module_1 = require("./categories/categories.module");
 const posts_module_1 = require("./posts/posts.module");
 const auth_module_1 = require("./auth/auth.module");
 const mail_module_1 = require("./mail/mail.module");
+const mongoose_1 = require("@nestjs/mongoose");
+const cursos_module_1 = require("./cursos/cursos.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
+            mongoose_1.MongooseModule.forRoot(process.env.MONGO_URI || ''),
             config_1.ConfigModule.forRoot({ isGlobal: true }),
             typeorm_1.TypeOrmModule.forRoot({
                 type: 'postgres',
@@ -41,6 +44,7 @@ exports.AppModule = AppModule = __decorate([
             posts_module_1.PostsModule,
             auth_module_1.AuthModule,
             mail_module_1.MailModule,
+            cursos_module_1.CursosModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

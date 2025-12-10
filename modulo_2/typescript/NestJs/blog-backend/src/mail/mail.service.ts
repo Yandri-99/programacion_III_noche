@@ -23,6 +23,7 @@ export class MailService {
       });
       return { messageId: info.messageId };
     } catch (error) {
+      console.error('ERROR REAL DE GMAIL:', error);
       throw new InternalServerErrorException('No se pudo enviar el correo');
     }
   }

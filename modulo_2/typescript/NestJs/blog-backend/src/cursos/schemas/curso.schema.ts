@@ -50,4 +50,4 @@ export class Curso extends Document {
   contenidos: Types.ObjectId[];
 }
 
-
+export const CursoSchema = SchemaFactory.createForClass(Curso);

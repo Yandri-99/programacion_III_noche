@@ -65,6 +65,7 @@ let MailService = class MailService {
             return { messageId: info.messageId };
         }
         catch (error) {
+            console.error('ERROR REAL DE GMAIL:', error);
             throw new common_1.InternalServerErrorException('No se pudo enviar el correo');
         }
     }
