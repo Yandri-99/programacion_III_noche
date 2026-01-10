@@ -1,17 +1,20 @@
-import React from 'react';
-import InputNotifier from './InputNotifier';
+import { useState } from "react";
+import InputNotifier from "./InputNotifier";
 
-const ParentInputNotifier: React.FC = () => {
-  const handleTextChange = (text: string) => {
-    console.log('Texto ingresado:', text);
-  };
+export default function ParentInputNotifier() {
+  // TypeScript infiere que el estado es 'string' por el valor inicial "".
+  // Explícitamente sería: useState<string>("")
+  const [text, setText] = useState<string>("");
 
   return (
-    <div>
-      <h2>Parent Input Notifier</h2>
-      <InputNotifier onChangeText={handleTextChange} />
-    </div>
+    <>
+      {/* Aquí ocurre la magia de tipos:
+        'InputNotifier' espera una función: (text: string) => void
+        'setText' es una función que acepta un string y actualiza el estado.
+        Por eso podemos pasarla directamente.
+      */}
+      <InputNotifier onChangeText={setText} />
+      <p>Texto: {text}</p>
+    </>
   );
-};
-
-export default ParentInputNotifier;
+}

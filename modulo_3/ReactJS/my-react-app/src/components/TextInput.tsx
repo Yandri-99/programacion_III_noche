@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function TextInput() {
-  const [text, setText] = useState("yandri");
+  const [text, setText] = useState("");
   return (
     <input
       type="text"

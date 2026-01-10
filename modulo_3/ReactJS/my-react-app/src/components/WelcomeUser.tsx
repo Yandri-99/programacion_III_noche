@@ -1,5 +1,5 @@
 export default function WelcomeUser() {
-  const name = "Yandri";
-  const lastname = "Llumiquinga";
-  return <p>Bienvenido, {name} {lastname}</p>;
+  const name = "Alejandro";
+  const apellido = "Martinez";
+  return <p>Bienvenido, {name} {apellido}</p>;
 }
